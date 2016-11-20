@@ -9,7 +9,7 @@ chrome.extension.sendMessage({}, function(response) {
 		// ----------------------------------------------------------
                 //
                 //
-                hideContent();
+                setInterval(hideContent, 1000);
 
 	}
 	}, 10);
