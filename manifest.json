@@ -1,8 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Unfresh Facebook",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "This removes fresh content from facebook, while leaving old content in place.",
   "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.facebook.com/"
       ],
       "js": [
         "src/inject/inject.js"
