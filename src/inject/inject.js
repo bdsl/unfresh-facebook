@@ -16,10 +16,18 @@ chrome.extension.sendMessage({}, function(response) {
 });
 
 function hideContent(){
-    var cutoff = 1479667109;
-    cutoff = cutoff - 60*60*24;
+    
+    /*hide anything from after the last time it was 7am */
+    var cutoff_hour = "7";
+    var now = new Date();
+    var cutoff = now;
+    cutoff.setHours(cutoff_hour,0,0,0);
 
-    hideNewContent(cutoff);
+    if (now.getHours() < cutoff_hour) {
+        /* If today's cutoff hour hasn't happened yet we use yesterdays */
+        cutoff.setDate(now.getDate()-1);
+    }
+    hideNewContent(cutoff.getTime()/1000);
 }
 
 /**
