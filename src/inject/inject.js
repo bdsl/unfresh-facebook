@@ -30,9 +30,7 @@ function hideNewContent(cutoff) {
     jQuery("div").each(function( index, element ) {
        e = jQuery(element);
        if (parseInt(e.data('timestamp')) > cutoff){
-           e.css({"border-color": "red", 
-                        "border-width":"1px", 
-                        "border-style":"solid"});
+           e.remove();
        } else {
        }
 
