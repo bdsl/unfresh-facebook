@@ -20,8 +20,10 @@
         "https://www.facebook.com/"
       ],
       "js": [
+        "js/jquery/jquery.js", 
         "src/inject/inject.js"
       ]
     }
   ]
 }
+
